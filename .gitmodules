@@ -1,0 +1,3 @@
+[submodule "Vulpine/vendor/spdlog"]
+	path = Vulpine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
