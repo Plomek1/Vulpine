@@ -19,6 +19,10 @@
     <ClInclude Include="src\Vulpine\Log.h">
       <Filter>Vulpine</Filter>
     </ClInclude>
+    <ClInclude Include="src\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Events\Event.h" />
+    <ClInclude Include="src\Events\KeyEvent.h" />
+    <ClInclude Include="src\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Vulpine\Application.cpp">

@@ -11,4 +11,6 @@ namespace Vulpine
 	#else
 		#error Platform unsupported
 	#endif
+
+	#define BIT(x) (1 << x)
 }
