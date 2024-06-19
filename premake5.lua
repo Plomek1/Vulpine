@@ -18,6 +18,9 @@ project "Vulpine"
 	targetdir("bin/" .. outputdir .. "/%{prj.name}")
 	objdir("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "vppch.h"
+	pchsource "%{prj.name}/src/vppch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

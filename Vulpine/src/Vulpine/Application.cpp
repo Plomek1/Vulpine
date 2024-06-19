@@ -1,7 +1,5 @@
+#include "vppch.h"
 #include "Application.h"
-
-#include "Log.h"
-#include "Events/KeyEvent.h"
 
 namespace Vulpine
 {

@@ -34,6 +34,7 @@
     <ClInclude Include="src\Vulpine\Log.h">
       <Filter>Vulpine</Filter>
     </ClInclude>
+    <ClInclude Include="src\vppch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Vulpine\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Vulpine\Log.cpp">
       <Filter>Vulpine</Filter>
     </ClCompile>
+    <ClCompile Include="src\vppch.cpp" />
   </ItemGroup>
 </Project>

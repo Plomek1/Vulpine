@@ -2,9 +2,6 @@
 
 #include "Vulpine/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Vulpine
 {
 	enum class EventType
