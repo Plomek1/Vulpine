@@ -2,6 +2,7 @@
 
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Vulpine
 {
@@ -17,6 +18,8 @@ namespace Vulpine
 		static std::shared_ptr<spdlog::logger> _coreLogger;
 		static std::shared_ptr<spdlog::logger> _clientLogger;
 	};
+
+
 }
 
 #define VP_CORE_LOG_TRACE(...) ::Vulpine::Log::GetCoreLogger()->trace(__VA_ARGS__)
