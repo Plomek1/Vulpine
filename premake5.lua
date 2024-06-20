@@ -10,6 +10,11 @@ workspace "Vulpine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Vulpine/vendor/GLFW/include"
+
+include "Vulpine/vendor/GLFW"
+
 project "Vulpine"
 	location "Vulpine"
 	kind "SharedLib"
@@ -25,18 +30,25 @@ project "Vulpine"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.c",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
 	}
 
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib",
+		"dwmapi.lib"
 	}
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -51,14 +63,17 @@ project "Vulpine"
 		}
 
 	filter "configurations:Debug"
+		runtime "Debug"
 		defines "VP_DEBUG"
 		symbols "On"
 
 	filter "configurations:Release"
+		runtime "Release"	
 		defines "VP_RELEASE"
 		optimize "On"
 
 	filter "configurations:Dist"
+		runtime "Release"		
 		defines "VP_DIST"
 		optimize "On"
 
@@ -92,7 +107,6 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -101,13 +115,16 @@ project "Sandbox"
 		}
 
 	filter "configurations:Debug"
+		runtime "Debug"
 		defines "VP_DEBUG"
 		symbols "On"
 
 	filter "configurations:Release"
+		runtime "Release"	
 		defines "VP_RELEASE"
 		optimize "On"
 
 	filter "configurations:Dist"
+		runtime "Release"	
 		defines "VP_DIST"
 		optimize "On"

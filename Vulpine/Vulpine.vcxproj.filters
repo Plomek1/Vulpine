@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Events">
-      <UniqueIdentifier>{3A8963B1-262B-8E87-0FE6-A1DBFB2615D8}</UniqueIdentifier>
+    <Filter Include="Platforms">
+      <UniqueIdentifier>{DDACA145-4917-56BC-9255-0762FEFE3311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platforms\Windows">
+      <UniqueIdentifier>{17E40808-83FA-069E-CC71-92BF38C7D725}</UniqueIdentifier>
     </Filter>
     <Filter Include="Vulpine">
       <UniqueIdentifier>{E8259DF8-5405-1C94-5D1D-A76AC97B82F5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Vulpine\Events">
+      <UniqueIdentifier>{CC1CE0F0-B8EA-D3F6-A17E-441D8DEBAF5B}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Events\ApplicationEvent.h">
-      <Filter>Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Events\Event.h">
-      <Filter>Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Events\KeyEvent.h">
-      <Filter>Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Events\MouseEvent.h">
-      <Filter>Events</Filter>
+    <ClInclude Include="src\Platforms\Windows\WindowsWindow.h">
+      <Filter>Platforms\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\Vulpine.h" />
     <ClInclude Include="src\Vulpine\Application.h">
@@ -31,12 +28,30 @@
     <ClInclude Include="src\Vulpine\EntryPoint.h">
       <Filter>Vulpine</Filter>
     </ClInclude>
+    <ClInclude Include="src\Vulpine\Events\ApplicationEvent.h">
+      <Filter>Vulpine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vulpine\Events\Event.h">
+      <Filter>Vulpine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vulpine\Events\KeyEvent.h">
+      <Filter>Vulpine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vulpine\Events\MouseEvent.h">
+      <Filter>Vulpine\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Vulpine\Log.h">
+      <Filter>Vulpine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vulpine\Window.h">
       <Filter>Vulpine</Filter>
     </ClInclude>
     <ClInclude Include="src\vppch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platforms\Windows\WindowsWindow.cpp">
+      <Filter>Platforms\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Vulpine\Application.cpp">
       <Filter>Vulpine</Filter>
     </ClCompile>

@@ -15,9 +15,9 @@
 #include <unordered_set>
 
 #include "Vulpine/Log.h"
-#include "Events/ApplicationEvent.h"
-#include "Events/KeyEvent.h"
-#include "Events/MouseEvent.h"
+#include "Vulpine/Events/ApplicationEvent.h"
+#include "Vulpine/Events/KeyEvent.h"
+#include "Vulpine/Events/MouseEvent.h"
 
 #ifdef VP_PLATFORM_WINDOWS
 	#include <Windows.h>

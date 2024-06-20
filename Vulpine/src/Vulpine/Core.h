@@ -7,10 +7,9 @@ namespace Vulpine
 		#else
 			#define VUPLINE_API __declspec(dllimport)
 		#endif
-
 	#else
 		#error Platform unsupported
 	#endif
-
+	
 	#define BIT(x) (1 << x)
 }

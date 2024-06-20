@@ -3,12 +3,21 @@
 
 namespace Vulpine
 {
+	Application::Application() : _running(true)
+	{
+		_window = (std::unique_ptr<Window>)Window::Create();
+	}
+
+	Application::~Application() {}
+
 	void Application::Run()
 	{
-		KeyPressEvent e = KeyPressEvent(2, 12);
 
-		VP_LOG_TRACE(e.ToString());
 
-		while (true);
+
+		while (_running)
+		{
+			_window->OnUpdate();
+		}
 	}
 }

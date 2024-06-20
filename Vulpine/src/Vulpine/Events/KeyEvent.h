@@ -4,7 +4,7 @@
 
 namespace Vulpine
 {
-	class VUPLINE_API KeyEvent : public Event
+	class KeyEvent : public Event
 	{
 	public:
 		inline int GetKeyCode() const { return _keyCode; }
@@ -16,7 +16,7 @@ namespace Vulpine
 		int _keyCode;
 	};
 
-	class VUPLINE_API KeyPressEvent : public KeyEvent
+	class KeyPressEvent : public KeyEvent
 	{
 	public:
 		KeyPressEvent(int keyCode, int repeatCount) : KeyEvent(keyCode), _repeatCount(repeatCount) {}
@@ -37,7 +37,7 @@ namespace Vulpine
 
 	};
 
-	class VUPLINE_API KeyReleaseEvent : public KeyEvent
+	class KeyReleaseEvent : public KeyEvent
 	{
 	public:
 		KeyReleaseEvent(int keyCode) : KeyEvent(keyCode) {}

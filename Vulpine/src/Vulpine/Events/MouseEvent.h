@@ -5,7 +5,7 @@
 namespace Vulpine
 {
 
-	class VUPLINE_API MouseMoveEvent : public Event
+	class MouseMoveEvent : public Event
 	{
 	public:
 		MouseMoveEvent(float xPos, float yPos) : _xPos(xPos), _yPos(yPos) {}
@@ -28,7 +28,7 @@ namespace Vulpine
 		float _yPos;
 	};
 
-	class VUPLINE_API MouseScrollEvent : public Event
+	class MouseScrollEvent : public Event
 	{
 		MouseScrollEvent(int xOffset, int yOffset) : _xOffset(xOffset), _yOffset(yOffset) {}
 
@@ -50,7 +50,7 @@ namespace Vulpine
 		int _yOffset;
 	};
 
-	class VUPLINE_API MouseButtonEvent : public Event
+	class MouseButtonEvent : public Event
 	{
 	public:
 		inline int GetButtonCode() { return _button; }
@@ -62,9 +62,9 @@ namespace Vulpine
 		int _button;
 	};
 	
-	class VUPLINE_API MouseButtonPressEvent : public MouseButtonEvent
+	class MouseButtonPressEvent : public MouseButtonEvent
 	{
-		MouseButtonPressEvent(float button, float yPos) : MouseButtonEvent(button) {}
+		MouseButtonPressEvent(int button) : MouseButtonEvent(button) {}
 
 
 		EVENT_CLASS_TYPE(MouseButtonPress)
@@ -77,9 +77,9 @@ namespace Vulpine
 		}
 	};
 
-	class VUPLINE_API MouseButtonReleaseEvent : public MouseButtonEvent
+	class MouseButtonReleaseEvent : public MouseButtonEvent
 	{
-		MouseButtonReleaseEvent(float button, float yPos) : MouseButtonEvent(button) {}
+		MouseButtonReleaseEvent(int button) : MouseButtonEvent(button) {}
 
 		EVENT_CLASS_TYPE(MouseButtonRelease)
 

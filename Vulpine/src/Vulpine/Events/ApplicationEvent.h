@@ -4,7 +4,7 @@
 
 namespace Vulpine 
 {
-	class VUPLINE_API WindowCloseEvent : public Event
+	class WindowCloseEvent : public Event
 	{
 	public:
 		WindowCloseEvent() {}
@@ -14,7 +14,7 @@ namespace Vulpine
 	};
 
 
-	class VUPLINE_API WindowResizeEvent : public Event
+	class WindowResizeEvent : public Event
 	{
 	public:
 		WindowResizeEvent(int xSize, int ySize) : _xSize(xSize), _ySize(ySize) {}
@@ -38,7 +38,7 @@ namespace Vulpine
 ;
 	};
 
-	class VUPLINE_API WindowFocusEvent : public Event
+	class WindowFocusEvent : public Event
 	{
 	public:
 		WindowFocusEvent() {}
@@ -47,7 +47,7 @@ namespace Vulpine
 		EVENT_CLASS_CATEGORY(ApplicationEvent)
 	};
 
-	class VUPLINE_API WindowUnfocusEvent : public Event
+	class WindowUnfocusEvent : public Event
 	{
 		WindowUnfocusEvent() {}
 
